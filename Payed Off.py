@@ -17,9 +17,9 @@ def payedOff(balance, timePeriod, iRte):
             min = payment
     return payment
 
-thisBalance = int(input('How much do you owe?  '));
-thisMonths = int(input('How many months do you have to pay it off?  '));
-thisRate = float(input('What is your interest rate?  '));
+thisBalance = int(input('How much do you owe?  '))
+thisMonths = int(input('How many months do you have to pay it off?  '))
+thisRate = float(input('What is your interest rate?  '))
 
 if thisRate > 1:
     thisRate = thisRate/100
