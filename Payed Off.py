@@ -9,7 +9,7 @@ def payedOff(balance, timePeriod, iRte):
         payment = round((max + min) / 2, 2)
         for i in range(timePeriod):
             balance = round((balance - payment) * (1 + (iRte) / 12),2)
-        if balance > -1 and balance < 0:
+        if balance > -.5 and balance < 0:
             conditional = False
         elif balance < 0:
             max = payment
@@ -17,9 +17,9 @@ def payedOff(balance, timePeriod, iRte):
             min = payment
     return payment
 
-thisBalance = int(input('How much do you owe?  '))
-thisMonths = int(input('How many months do you have to pay it off?  '))
-thisRate = float(input('What is your interest rate?  '))
+thisBalance = int(input('How much do you owe?  '));
+thisMonths = int(input('How many months do you have to pay it off?  '));
+thisRate = float(input('What is your interest rate?  '));
 
 if thisRate > 1:
     thisRate = thisRate/100
